@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyCast - Real-time Weather</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">W</div>
+        <span>Weather<strong>24</strong></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Real-Time Forecast</p>
+          <h1>Know your weather, <em>anywhere</em>.</h1>
+          <p class="hero-note">Accurate hourly and 7-day weather outlook.</p>
+        </div>
+
+        <div class="search">
+          <form id="searchForm">
+            <label for="cityInput">Search City</label>
+            <div class="search-row">
+              <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Search City or place ..." 
+                required 
+                autocomplete="off"
+              />
+              <button type="submit">Search</button>
+            </div>
+          </form>
+          <p id="searchStatus" class="search-status"></p>
+        </div>
+      </section>
+
+      <section id="dashboard" class="dashboard">
+        <div class="loading">
+          <span></span>
+          <p>Loading weather data...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Weather data provided by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
